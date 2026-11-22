@@ -1,0 +1,9 @@
+
+{
+  "app": "1.0.0",
+  "holidays": "2026.1",
+  "locales": "2026.1",
+  "tz": "2026.1",
+  "holidaysFile": null,
+  "note": "Optional update feed. Set holidays to a newer version and holidaysFile to a validated dataset URL path to enable background holiday updates. The app never requires this file."
+}
