@@ -1,0 +1,25 @@
+
+{
+  "name": "Dual Calendar Sky",
+  "short_name": "SkyCal",
+  "description": "Offline-first dual Gregorian–Hijri calendar with live solar time, moon phase and a dynamic sky.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a1128",
+  "theme_color": "#0a1128",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["productivity", "utilities", "lifestyle"],
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Today", "url": "./?tab=today", "icons": [{ "src": "icon.svg", "sizes": "any" }] },
+    { "name": "Calendar", "url": "./?tab=calendar", "icons": [{ "src": "icon.svg", "sizes": "any" }] },
+    { "name": "Holidays", "url": "./?tab=holidays", "icons": [{ "src": "icon.svg", "sizes": "any" }] }
+  ]
+}

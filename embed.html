@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'">
+<title>Embed · Dual Calendar Sky Widget</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+body{margin:0;font-family:ui-sans-serif,system-ui,"Segoe UI",Tahoma,sans-serif;background:#0b1026;color:#eef3ff;min-height:100vh;
+background-image:radial-gradient(60% 40% at 20% 0%,#1c2f63 0%,transparent 70%),radial-gradient(50% 40% at 90% 100%,#3c2a55 0%,transparent 70%)}
+main{max-width:860px;margin:0 auto;padding:40px 20px}
+h1{font-size:1.5rem}p{color:rgba(238,243,255,.75);line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin:24px 0}
+code,pre{background:rgba(238,243,255,.08);border:1px solid rgba(238,243,255,.18);border-radius:12px;font-size:.78rem}
+pre{padding:14px;overflow:auto;white-space:pre-wrap;word-break:break-all}
+a{color:#e8b64c}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-thumb{background:#e8b64c66;border-radius:8px}
+</style>
+</head>
+<body>
+<main>
+<h1>Embeddable compact widget</h1>
+<p>One custom element, zero network at runtime. Attributes map to settings; events: <code>date-change</code>, <code>settings-change</code>, <code>holiday-select</code>, <code>error</code>. Works inside any host page after the module is cached.</p>
+<div class="grid">
+  <dual-calendar-sky-widget app-language="en" gregorian-language="en" hijri-language="ar" country="SA" theme="auto" rollover="sunset"></dual-calendar-sky-widget>
+  <dual-calendar-sky-widget app-language="ar" gregorian-language="fr" hijri-language="ar" country="AE" theme="dynamic" primary-calendar="hijri" hijri-method="islamic-umalqura"></dual-calendar-sky-widget>
+  <dual-calendar-sky-widget app-language="tr" gregorian-language="tr" hijri-language="tr" country="TR" theme="auto" latitude="41.0082" longitude="28.9784"></dual-calendar-sky-widget>
+  <dual-calendar-sky-widget app-language="en" gregorian-language="en" hijri-language="en" countries="GB,US" theme="night" hijri-method="islamic-civil" rollover="midnight"></dual-calendar-sky-widget>
+</div>
+<pre>&lt;script type="module" src="./js/widget.js"&gt;&lt;/script&gt;
+&lt;dual-calendar-sky-widget
+  app-language="en" gregorian-language="en" hijri-language="ar"
+  primary-calendar="gregorian" hijri-method="islamic-umalqura"
+  rollover="sunset" sunset-offset-minutes="0"
+  country="SA" theme="auto"&gt;
+&lt;/dual-calendar-sky-widget&gt;</pre>
+<p><a href="./">← Open the full app</a></p>
+</main>
+<script type="module" src="js/widget.js"></script>
+</body>
+</html>
